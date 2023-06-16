@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback form</title>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("1bfZuQw8bxCbJBIXP");
+})();
+</script>
+    <style>
+        body{
+            margin: 0;
+            padding:0;
+            background-color: aqua;
+        }
+.main_container{
+
+    width: 250px;
+    height: auto;
+    margin: auto;
+    margin-top: 150px;
+    padding: 1px 10px 10px 10px;
+    background-color: rgb(59, 130, 193);
+    border-radius: 10px;
+}
+.labels{
+    color: plum;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.inputs{
+    border: 1px solid green;
+border-radius: 5px;
+/* box-sizing: content-box; */
+margin: 5px;
+padding: 10px;
+width: 85%;
+}
+button{
+    border: 1px solid blue;
+    margin: 2px 8px 2px 5px;
+    padding: 2px 4px 2px 4px;
+    background-color: coral;
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <h1>FeedBack</h1>
+        <label for="name" class="labels" name="name">Name:</label><br>
+        <input type="text" class="inputs" id="name" placeholder="Enter Your Name" required><br>
+        <label for="email" class="labels" name="email">Email:</label><br>
+        <input type="email" id="email" class="inputs" placeholder="Enter Your Email" required><br>
+        <label for="tel" class="labels" name="tel">Phone no:</label><br>
+        <input type="tel" id="tel" class="inputs" placeholder="Enter Your Whatsapp Num" required><br>
+        <label for="feedback" class="labels"name="feedback">Feedback:</label><br>
+        <!-- <input type="text" id="feedback" class="inputs" placeholder="Please share your feedback" required><br> -->
+        
+        <textarea name="message" id="feedback" cols="30" rows="10"></textarea><br>
+        <button type="submit" class="submit" id="Submit" onclick="sendmail()">Send</button>
+    </div>
+   
+    <script>
+function sendmail(){
+    var params= {
+        name : document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("feedback").value,
+        tel: document.getElementById("tel").value,
+    };
+    const serviceID = "service_ghpn8xq";
+const templateID = "template_8ldtzn8";
+emailjs.send(serviceID,templateID,params)
+.then(
+    res => {
+        document.getElementById("name").value="";
+        
+        document.getElementById("email").value="";
+        document.getElementById("feedback").value="";
+        document.getElementById("tel").value,
+        console.log(res);
+        alert("Thanks for your feedback");
+    }
+)
+.catch(error=>console.log(error));
+
+}
+
+/*
+const serviceID = "service_ghpn8xq";
+const templateID = "template_8ldtzn8";
+emailjs.send(serviceID,templateID,params)
+.then(
+    res => {
+        document.getElementById("name").value="";
+        
+        document.getElementById("email").value="";
+        document.getElementById("feedback").value="";
+        console.log(res);
+        alert("Thanks for your feedback");
+    }
+)
+.catch(error=>console.log(error));*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/*this line of code is for import boostrap icons */
+/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"); */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    /* box-sizing: border-box; */
+
+}
+
+.header_container {
+    /* display: flex; */
+
+    background-color: #e4dde0;
+    /* padding: 20px; */
+    padding: 0px;
+    text-align: center;
+    
+    /* height: 35px; mention for increase height of header */
+    height: 100px;
+}
+
+/* signup button */
+.signup_button{
+    align-items: end;
+    display: flex;
+}
+.Submit_buuton{
+    border-radius: 5px;
+    background: linear-gradient(150deg,#7d2977,#272a8c,#932eb2);
+    color:yellow;
+}
+/* internal body */
+.main_container {
+    /* margin: 0px;
+    padding: 0px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: space-between;/*in space-between it showing on leftside of page*/ 
+    /*justify-content: center;*/ /*in center it showing on center of page*/
+}
+
+.list_container {
+    /* margin: 0px;
+    padding: 0px; */
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+}
+
+/* ul{
+    display: flex;
+    list-style-type: none;
+    /* text-align: right; */
+/* align-items: right;  */
+/* margin: 20px;
+    padding: 5px; }
+    */
+    .list_container ul{
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+    }
+/*     
+ ul li {
+    margin: 5px;
+    padding: 2px;
+} */
+
+.list_container li{
+    /* display: inline-block; */
+    margin: 0 10px;
+    /* justify-content: space-between; */
+}
+.list_container li a{
+    text-decoration: none;
+    font-size: 20px;/*mention for increase fontsize of text in a tag*/
+}
+/* navbar logo */
+/* .logo_main{
+    /* display: flex; */
+    /* margin: 0;
+    padding: 0; */
+ 
+.logo_main img{
+    /* margin: 0;
+    padding: 0; */
+    width: 100%;
+    max-width: 120px;
+}
+
+
+/* Inner Body */
+
+.inner_container_2{
+    display: flex;
+    background-color: #e4dde0;
+    /* margin: 2px 10px;
+    padding: 2px 5px; */
+    /* margin-left:15px ;
+    margin-top: 0;
+    margin-right: 15px; */
+    margin: 0;
+    padding-top: 0;
+    /* padding:0 15px; */
+    /* border: 1px solid blue; */
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: space-between;
+}
+.innertext{
+    padding-left: 5px;
+    justify-content: space-between;
+}
+.emvid{
+    border-radius: 5px;
+}
+.inner_container_2 div{
+    margin: 2px 10px;
+    padding: 2px 5px;
+    /* border: 1px solid blue; */
+    align-items: center;
+
+}
+.inner_container{
+    margin: auto;
+    /* padding: 0 70px; */
+    display: flex;
+    /* background:linear-gradient(150deg, #7d2977,#272a8c,#932eb2); */
+    
+    /* float: right; */ /*can mixedup each content here*/
+}
+.inner_container img{
+    /* padding: 0 120px; */
+    /* width: 100%;
+    height: 800px; */
+    width: 100%;
+    height: 800px;
+    
+}
+/* .innertext h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.innertext h2{
+    color: #c1cd21;
+} */
+/* marquee in main body */
+.marqueeText{
+    background:linear-gradient(150deg, #7d2977,#272a8c,#932eb2);
+    color: #c1cd21;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+/* For footer */
+.footer_container{
+    background-color: #c1cd21;
+    padding: 20px;
+    text-align: center;
+    height: 90px;/*mention for increase height of footer to show boostrap icon*/
+    /*height: 40px;mention for increase height of footer*/
+}
+.footerMain_container {
+    /* display: flex;
+    background-color: #c1cd21; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    justify-content: center; /* Updated to center align */
+
+}
+.footerMain_container ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+.footerMain_container li{
+    display: inline-block;
+    margin: 0 10px;
+}
+.footerMain_container li a{
+    text-decoration: none;
+    font-size: 20px;/*mention for increase fontsize of text in a tag*/
+}
